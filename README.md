@@ -34,20 +34,52 @@ Incorporate logging to document the process and provide user feedback.
 
 #### 1. Environment Setup
 
-Create and activate a project virtual environment.
-Install all required packages into your local project virtual environment.
-After installing the required dependencies, generate a requirements.txt file.
-Document the process and commands you used in your README.md.
-Add a .gitignore file to your project with useful entries.
+1. Create and activate a project virtual environment.
+1. Install all required packages into your local project virtual environment.
+1. After installing the required dependencies, generate a requirements.txt file.
+1. Document the process and commands you used in your README.md.
+1. Add a .gitignore file to your project with useful entries.
 
-#### 2. Database Creation and Schema Design
+#### 2. Project Start
+
+Create a docstring with a brief introduction to your project.
+
+#### 3. Import Dependencies
+
+Import the required dependencies, following the conventional order.
+
+#### 4. Logging
+
+Logging is recommended for all script and notebook projects.
+Implement logging to enhance debugging and maintain a record of program execution.
+
+1. Configure logging to write to a file named log.txt.
+1. Log the start of the program using logging.info().
+1. Log the end of the program using logging.info().
+1. Log exceptions using logging.exception().
+1. Log other major events using logging.info().
+1. Log the start and end of major functions using logging.debug().
+
+For example:
+
+```python
+import logging
+
+# Configure logging to write to a file, appending new logs to the existing file
+logging.basicConfig(filename='log.txt', level=logging.DEBUG, filemode='a', format='%(asctime)s - %(levelname)s - %(message)s')
+
+logging.info("Program started")
+logging.info("Program ended")
+```
+
+#### 5. Database Creation and Schema Design
 
 Create a new SQLite database file.
 Design a schema with at least two related tables, including foreign key constraints.
 Document the schema design in your README.md.
 Keep each SQL statement in a separate file.
 
-#### 3. SQL Operations
+#### 6. SQL Operations
 
 Implement SQL statements and queries to perform table creation, data insertion,
 data querying (with filters, sorting, and joining tables),
@@ -65,7 +97,7 @@ Include the following SQL files:
 8. query_group_by.sql - use GROUP BY clause (and optionally with aggregation)
 9. query_join.sql - use INNER JOIN operation and optionally include LEFT JOIN, RIGHT JOIN, etc.
 
-#### 4. Python and SQL Integration
+#### 7. Python and SQL Integration
 
 Use Python to interact with the SQL database and execute SQL commands:
 
@@ -81,19 +113,9 @@ def execute_sql_from_file(db_filepath, sql_file):
 
 ```
 
-#### 5. Logging
+#### 8. Main Function
 
-Implement logging to document the process and provide user feedback.
-
-```python
-import logging
-
-logging.basicConfig(level=logging.DEBUG, format='%(asctime)s.%(levelname)s.%(message)s')
-```
-
-#### 6. Main Function
-
-Implement a main() function to execute the SQL operations.
+Implement a main() function to execute the project logic.
 
 ```python
 def main():
