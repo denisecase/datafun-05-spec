@@ -34,7 +34,11 @@ Incorporate logging to document the process and provide user feedback.
 
 #### 1. Environment Setup
 
-Set up a Python virtual environment. Document the process and commands used in your README.md. After installing the required dependencies, generate a requirements.txt file. Add a .gitignore file to your project.
+Create and activate a project virtual environment.
+Install all required packages into your local project virtual environment.
+After installing the required dependencies, generate a requirements.txt file.
+Document the process and commands you used in your README.md.
+Add a .gitignore file to your project with useful entries.
 
 #### 2. Database Creation and Schema Design
 
