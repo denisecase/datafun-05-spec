@@ -17,22 +17,18 @@ including queries with joins, filters, and aggregations.
 
 Create a new GitHub repository with a README.md and a Python script with the specified name.
 
-### Version Control with Git
+## Version Control with Git
 
 Use Git for version control.
 Document your workflow for managing the project in your README.md.
 
-## Module Specification
-
-### Objective
+## Objective
 
 Create a Python script that demonstrates the ability to interact with a SQL database,
 including creating a database, defining a schema, and executing various SQL commands.
 Incorporate logging to document the process and provide user feedback.
 
-### Requirements
-
-#### 1. Environment Setup
+### 1. Environment Setup
 
 1. Create and activate a project virtual environment.
 1. Install all required packages into your local project virtual environment.
@@ -40,15 +36,15 @@ Incorporate logging to document the process and provide user feedback.
 1. Document the process and commands you used in your README.md.
 1. Add a .gitignore file to your project with useful entries.
 
-#### 2. Project Start
+### 2. Project Start
 
 Create a docstring with a brief introduction to your project.
 
-#### 3. Import Dependencies
+### 3. Import Dependencies
 
 Import the required dependencies, following the conventional order.
 
-#### 4. Logging
+### 4. Logging
 
 Logging is recommended for all script and notebook projects.
 Implement logging to enhance debugging and maintain a record of program execution.
@@ -72,14 +68,14 @@ logging.info("Program started")
 logging.info("Program ended")
 ```
 
-#### 5. Database Creation and Schema Design
+### 5. Database Creation and Schema Design
 
 Create a new SQLite database file.
 Design a schema with at least two related tables, including foreign key constraints.
 Document the schema design in your README.md.
 Keep each SQL statement in a separate file.
 
-#### 6. SQL Operations
+### 6. SQL Operations
 
 Implement SQL statements and queries to perform table creation, data insertion,
 data querying (with filters, sorting, and joining tables),
@@ -97,7 +93,7 @@ Include the following SQL files:
 8. query_group_by.sql - use GROUP BY clause (and optionally with aggregation)
 9. query_join.sql - use INNER JOIN operation and optionally include LEFT JOIN, RIGHT JOIN, etc.
 
-#### 7. Python and SQL Integration
+### 7. Python and SQL Integration
 
 Use Python to interact with the SQL database and execute SQL commands:
 
@@ -113,7 +109,7 @@ def execute_sql_from_file(db_filepath, sql_file):
 
 ```
 
-#### 8. Main Function
+### 8. Define Main Function
 
 Implement a main() function to execute the project logic.
 
@@ -136,7 +132,7 @@ def main():
 
 ```
 
-### Conditional Script Execution
+### 9. Conditional Script Execution
 
 Ensure the main function only executes when the script is run directly,
 not when imported as a module by using standard boilerplate code.
@@ -147,7 +143,7 @@ not when imported as a module by using standard boilerplate code.
 - The code should be clear, well-organized, and demonstrate good practices.
 - Include comments and docstrings for clarity.
 
-### Evaluation Criteria
+## Evaluation Criteria
 
 - Functionality: The project should be functional and meet all requirements.
 - Documentation: The project should be well-written and well-documented.
