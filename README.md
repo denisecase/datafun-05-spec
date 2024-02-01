@@ -13,14 +13,20 @@ including queries with joins, filters, and aggregations.
 
 - GitHub Repository:  **datafun-05-sql**
 - Documentation:      README.md
-- Script:             yourname_sql.py
 
-Create a new GitHub repository with a README.md and a Python script with the specified name.
+## External Dependencies
+
+This project requires the following external modules, so a virtual environment is recommended.
+
+- pandas
+- pyarrow
 
 ## Version Control with Git
 
-Use Git for version control.
-Document your workflow for managing the project in your README.md.
+- Create a new GitHub repository named `datafun-05-sql`.
+- Clone the repository to your local machine.
+- Document the steps and commands in your README.md.
+- Document your workflow and commands as you edit, add, commit, and push changes to the GitHub repository.
 
 ## Objective
 
@@ -30,19 +36,44 @@ Incorporate logging to document the process and provide user feedback.
 
 ### 1. Environment Setup
 
-1. Create and activate a project virtual environment.
+1. Create and activate a Python virtual environment for the project.
 1. Install all required packages into your local project virtual environment.
-1. After installing the required dependencies, generate a requirements.txt file.
+1. After installing the required dependencies, redirect the output of the pip freeze command to a requirements.txt file in your root project folder.
 1. Document the process and commands you used in your README.md.
-1. Add a .gitignore file to your project with useful entries.
+1. Add a [.gitignore](.gitignore) file to your project to exclude the virtual environment folder, your .vscode settings folder, and any other files that do not need to be committed to GitHub.
+
+Terminal Commands: Windows example - record your process in your README:
+
+```Powershell
+py -m venv .venv
+.\.venv\Scripts\Activate.ps1
+py -m pip install pandas pyarrow
+py -m pip freeze > requirements.txt
+```
+
+Terminal Commands: Mac example - record your process in your README:
+
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+python3 -m pip install requests
+python3 -m pip freeze > requirements.txt
+```
 
 ### 2. Project Start
 
-Create a docstring with a brief introduction to your project.
+In your Python file, create a docstring with a brief introduction to your project.
 
-### 3. Import Dependencies
+### 3. Import Dependencies (At the Top, After the Introduction)
 
-Import the required dependencies, following the conventional order.
+Organize your project imports near the top of the file, following conventions.
+For example, standard library imports first, then external library imports, then local module imports. 
+Continue to practice importing your own modules and reuse your prior code when building your project folders.
+Follow conventional package import organization and aliasing. 
+Import each package just once near the top of the file. 
+Be sure you have INSTALLED any external packages (those not in the Python Standard Library) into your active project virtual environment first. 
+
+Note: if we use "import pathlib" as below, we must use "pathlib.Path" when working with a Path. Many other projects use "from pathlib import Path". When using this approach, you omit the initial pathlib in pathlib.Path, and just use Path.
 
 ### 4. Logging
 
