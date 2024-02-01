@@ -56,7 +56,7 @@ Terminal Commands: Mac example - record your process in your README:
 ```bash
 python3 -m venv .venv
 source .venv/bin/activate
-python3 -m pip install requests
+python3 -m pip install pandas pyarrow
 python3 -m pip freeze > requirements.txt
 ```
 
