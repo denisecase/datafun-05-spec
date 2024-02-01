@@ -11,7 +11,7 @@ including queries with joins, filters, and aggregations.
 
 ## Deliverable Names
 
-- GitHub Repository:  datafun-05-sql
+- GitHub Repository:  **datafun-05-sql**
 - Documentation:      README.md
 - Script:             yourname_sql.py
 
