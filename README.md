@@ -25,7 +25,7 @@ This project requires the following external modules, so a virtual environment i
 
 ## Version Control with Git
 
-- Create a new GitHub repository named `datafun-05-sql`.
+- Create a new GitHub repository.
 - Clone the repository to your local machine.
 - Document the steps and commands in your README.md.
 - Document your workflow and commands as you edit, add, commit, and push changes to the GitHub repository.
@@ -75,11 +75,12 @@ Follow conventional package import organization and aliasing.
 Import each package just once near the top of the file. 
 Be sure you have INSTALLED any external packages (those not in the Python Standard Library) into your active project virtual environment first. 
 
-Note: if we use "import pathlib" as below, we must use "pathlib.Path" when working with a Path. Many other projects use "from pathlib import Path". When using this approach, you omit the initial pathlib in pathlib.Path, and just use Path.
+Note: if we use "import pathlib", we must use "pathlib.Path" when working with a Path. 
+If you use "from pathlib import Path", you omit the initial pathlib in pathlib.Path, and just use Path.
 
 ### 4. Logging
 
-Logging is recommended for all script and notebook projects.
+Logging is recommended for most professional projects.
 Implement logging to enhance debugging and maintain a record of program execution.
 
 1. Configure logging to write to a file named log.txt.
