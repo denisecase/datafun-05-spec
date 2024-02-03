@@ -11,8 +11,10 @@ including queries with joins, filters, and aggregations.
 
 ## Deliverable Names
 
-- GitHub Repository:  **datafun-05-sql**
+- GitHub Repository:  **datafun-05-sql** or **datafun-05-sql-project** [see Note 1 below]
 - Documentation:      README.md
+
+Note 1: You may continue to use the practice repo - or create a new one for this project.
 
 ## External Dependencies
 
