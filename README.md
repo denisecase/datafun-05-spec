@@ -13,8 +13,11 @@ including queries with joins, filters, and aggregations.
 
 - GitHub Repository:  **datafun-05-sql** or **datafun-05-sql-project** [see Note 1 below]
 - Documentation:      README.md
+- Initialize script:  db_initialize_yourname.py
+- Operations script:  db_operations_yourname.py
 
 Note 1: You may continue to use the practice repo - or create a new one for this project.
+You may use other names for your scripts as you like.
 
 ## External Dependencies
 
@@ -102,23 +105,44 @@ logging.info("Program started")
 logging.info("Program ended")
 ```
 
-### 5. Database Creation and Schema Design
+### 5. Schema Design and Database Creation 
 
-Create a new SQLite database file.
 Design a schema with at least two related tables, including foreign key constraints.
 Document the schema design in your README.md.
+
+Implement a Python script to create the database, create the tables, and populate the tables.
 Keep each SQL statement in a separate file.
+
+For example:
+
+```python
+
+import sqlite3
+import pandas as pd
+import pathlib
+
+# Your code here....
+
+def main():
+    create_database()
+    create_tables()
+    insert_data_from_csv()
+
+if __name__ == "__main__":
+    main()
+```
 
 ### 6. SQL Operations
 
-Implement SQL statements and queries to perform table creation, data insertion,
-data querying (with filters, sorting, and joining tables),
+Implement SQL statements and queries to perform additional operations and use Python to execute your SQL statements.
+You might create an additional table, insert new records,
+and perform data querying (with filters, sorting, and joining tables),
 data aggregation, and record update and deletion.
 
 Include the following SQL files:
 
-1. create_tables.sql - create your database schema.
-2. insert_records.sql - insert at least 10 records into each table.
+1. create_tables.sql - create your database schema using sql 
+2. insert_records.sql - insert at least 10 additional records into each table.
 3. update_records.sql - update 1 or more records in a table.
 4. delete_records.sql - delete 1 or more records from a table.
 5. query_aggregation.sql - use aggregation functions including COUNT, AVG, SUM.
@@ -145,14 +169,13 @@ def execute_sql_from_file(db_filepath, sql_file):
 
 ### 8. Define Main Function
 
-Implement a main() function to execute the project logic.
+Implement a main() function to execute the project SQL operations logic.
 
 ```python
 def main():
     db_filepath = 'your_database.db'
 
     # Create database schema and populate with data
-    execute_sql_from_file(db_filepath, 'create_tables.sql')
     execute_sql_from_file(db_filepath, 'insert_records.sql')
     execute_sql_from_file(db_filepath, 'update_records.sql')
     execute_sql_from_file(db_filepath, 'delete_records.sql')
