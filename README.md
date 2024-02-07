@@ -101,8 +101,8 @@ import logging
 # Configure logging to write to a file, appending new logs to the existing file
 logging.basicConfig(filename='log.txt', level=logging.DEBUG, filemode='a', format='%(asctime)s - %(levelname)s - %(message)s')
 
-logging.info("Program started")
-logging.info("Program ended")
+logging.info("Program started") # add this at the beginning of the main method
+logging.info("Program ended")  # add this at the end of the main method
 ```
 
 ### 5. Schema Design and Database Creation 
@@ -167,7 +167,7 @@ def execute_sql_from_file(db_filepath, sql_file):
 
 ```
 
-### 8. Define Main Function
+### 8. Define Main Function for SQL Operations Script
 
 Implement a main() function to execute the project SQL operations logic.
 
