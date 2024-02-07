@@ -13,8 +13,8 @@ including queries with joins, filters, and aggregations.
 
 - GitHub Repository:  **datafun-05-sql** or **datafun-05-sql-project** [see Note 1 below]
 - Documentation:      README.md
-- Initialize script:  db_initialize_yourname.py
-- Operations script:  db_operations_yourname.py
+- Initialize script:  **db_initialize_yourname.py**
+- Operations script:  **db_operations_yourname.py**
 
 Note 1: You may continue to use the practice repo - or create a new one for this project.
 You may use other names for your scripts as you like.
