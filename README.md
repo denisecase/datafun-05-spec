@@ -43,7 +43,6 @@ Incorporate logging to document the process and provide user feedback.
 
 1. Create and activate a Python virtual environment for the project.
 1. Install all required packages into your local project virtual environment.
-1. After installing the required dependencies, redirect the output of the pip freeze command to a requirements.txt file in your root project folder.
 1. Document the process and commands you used in your README.md.
 1. Add a [.gitignore](.gitignore) file to your project to exclude the virtual environment folder, your .vscode settings folder, and any other files that do not need to be committed to GitHub.
 
@@ -53,7 +52,6 @@ Terminal Commands: Windows example - record your process in your README:
 py -m venv .venv
 .\.venv\Scripts\Activate.ps1
 py -m pip install pandas pyarrow
-py -m pip freeze > requirements.txt
 ```
 
 Terminal Commands: Mac example - record your process in your README:
@@ -62,7 +60,6 @@ Terminal Commands: Mac example - record your process in your README:
 python3 -m venv .venv
 source .venv/bin/activate
 python3 -m pip install pandas pyarrow
-python3 -m pip freeze > requirements.txt
 ```
 
 ### 2. Project Start
@@ -118,18 +115,23 @@ For example:
 ```python
 
 import sqlite3
-import pandas as pd
 import pathlib
+import pandas as pd
 
 # Your code here....
+# Define paths...
+# Define functions...
 
+# Define the main function that will call your functions
 def main():
-    create_database()
-    create_tables()
-    insert_data_from_csv()
+    paths_to_verify = [sql_file_path, author_data_path, book_data_path]
+    verify_and_create_folders(paths_to_verify)
+    
+    create_database(db_file_path)
+    create_tables(db_file_path, sql_file_path)
+    insert_data_from_csv(db_file_path, author_data_path, book_data_path)
 
-if __name__ == "__main__":
-    main()
+
 ```
 
 ### 6. SQL Operations
@@ -153,7 +155,8 @@ Include the following SQL files:
 
 ### 7. Python and SQL Integration
 
-Use Python to interact with the SQL database and execute SQL commands:
+Use Python to interact with the SQL database and execute SQL commands.
+Here's a generic example that you can use to customize. 
 
 ```python
 import sqlite3
@@ -173,17 +176,10 @@ Implement a main() function to execute the project SQL operations logic.
 
 ```python
 def main():
-    db_filepath = 'your_database.db'
+    ...
 
     # Create database schema and populate with data
-    execute_sql_from_file(db_filepath, 'insert_records.sql')
-    execute_sql_from_file(db_filepath, 'update_records.sql')
-    execute_sql_from_file(db_filepath, 'delete_records.sql')
-    execute_sql_from_file(db_filepath, 'query_aggregation.sql')
-    execute_sql_from_file(db_filepath, 'query_filter.sql')
-    execute_sql_from_file(db_filepath, 'query_sorting.sql')
-    execute_sql_from_file(db_filepath, 'query_group_by.sql')
-    execute_sql_from_file(db_filepath, 'query_join.sql')
+    ... your code here to perform all required operations
 
     logging.info("All SQL operations completed successfully")
 
@@ -193,6 +189,12 @@ def main():
 
 Ensure the main function only executes when the script is run directly,
 not when imported as a module by using standard boilerplate code.
+
+```python
+# Conditionally execute the main() function if this is the script being run
+if __name__ == "__main__":
+    main()
+```
 
 ## Module Design
 
