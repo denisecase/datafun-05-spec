@@ -19,6 +19,8 @@ including queries with joins, filters, and aggregations.
 Note 1: You may continue to use the practice repo - or create a new one for this project.
 You may use other names for your scripts as you like.
 
+Note 2: An example repo that starts on this project is available at [datafun-05-sql](https://github.com/denisecase/datafun-05-sql).
+
 ## External Dependencies
 
 This project requires the following external modules, so a virtual environment is recommended.
