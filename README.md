@@ -21,19 +21,25 @@ You may use other names for your scripts as you like.
 
 Note 2: An example repo that starts on this project is available at [datafun-05-sql](https://github.com/denisecase/datafun-05-sql).
 
+## Start a New Project
+
+Follow this common workflow to start a new project.
+
+1. In your browser, create a GitHub project repository with a default README.md. Name the repo as specified above.
+2. Clone your new repository down to your machine into your Documents folder.
+3. Open your new project repository folder in the Documents folder of your machine in VS Code (if you haven't already).
+4. In VS Code, add a useful .gitignore file with a line for .vsode/ and .venv/ and whatever else doesn't need to be tracked in the repository.
+5. In VS Code, edit your README.md to record your commands, process, and notes so far.
+6. In VS Code, open a terminal - PowerShell if Windows, zsh or bash if Mac/Linux.
+7. Use the terminal to git add your files and folders to source control, and git commit your changes with a useful message (e.g. "initial commit"), and git push the changes up to GitHub.
+8. Verify your GitHub repository.
+
 ## External Dependencies
 
-This project requires the following external modules, so a virtual environment is recommended.
+This project requires at least the following external modules, so a local project virtual environment is recommended.
 
 - pandas
-- pyarrow
-
-## Version Control with Git
-
-- Create a new GitHub repository.
-- Clone the repository to your local machine.
-- Document the steps and commands in your README.md.
-- Document your workflow and commands as you edit, add, commit, and push changes to the GitHub repository.
+- pyarrow (required when using pandas)
 
 ## Objective
 
@@ -41,28 +47,15 @@ Create a Python script that demonstrates the ability to interact with a SQL data
 including creating a database, defining a schema, and executing various SQL commands.
 Incorporate logging to document the process and provide user feedback.
 
-### 1. Environment Setup
+## Requirements
 
-1. Create and activate a Python virtual environment for the project.
-1. Install all required packages into your local project virtual environment.
-1. Document the process and commands you used in your README.md.
-1. Add a [.gitignore](.gitignore) file to your project to exclude the virtual environment folder, your .vscode settings folder, and any other files that do not need to be committed to GitHub.
+### 1. Create and Manage Project Virtual Environment
 
-Terminal Commands: Windows example - record your process in your README:
-
-```Powershell
-py -m venv .venv
-.\.venv\Scripts\Activate.ps1
-py -m pip install pandas pyarrow
-```
-
-Terminal Commands: Mac example - record your process in your README:
-
-```bash
-python3 -m venv .venv
-source .venv/bin/activate
-python3 -m pip install pandas pyarrow
-```
+This project uses external packages, which are not included in the Python Standard Library - we must install them. 
+To keep our project separate from all other Python projects,
+we will create and manage a local project virtual environment.
+We'll install our packages into the local project virtual environment.
+For the recommended process with detailed steps and commands, see [PROJECT_VIRTUAL_ENV.md](PROJECT_VIRTUAL_ENV.md).
 
 ### 2. Project Start
 
