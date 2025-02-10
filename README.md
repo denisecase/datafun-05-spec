@@ -113,8 +113,3 @@ sql_queries folder:
 Use Python to execute the SQL queries and maybe chart, illustrate, and/or summarize your findings:
 
 db03_queries.py
-
-## NOTE: IN-PROGRESS
-
-This module is still in progress. 
-Additional instructions and assistance will be added.
